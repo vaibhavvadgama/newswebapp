@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  news-web-app:
+    build:
+      context: .
+    restart: always
+    image: vaibhavvadgama/newswebapp
+    ports:
+      - "80:80"

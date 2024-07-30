@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: newswebapp-pod
+  labels:
+    app: newswebapp
+spec:
+  containers:
+    - name: newswebapp-container
+      image: vaibhavvadgama/newswebapp

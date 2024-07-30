@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: newswebapp-replicaset
+  labels:
+    app: newswebapp
+spec:
+  replicas: 3
+  template:
+    metadata:
+      name: newswebapp-pod
+      labels:
+        app: newswebapp
+    spec:
+      containers:
+        - name: newswebapp-container
+          image: vaibhavvadgama/newswebapp
+  selector:
+    matchLabels:
+      app: newswebapp
