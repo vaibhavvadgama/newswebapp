@@ -10,7 +10,7 @@ jobs:
   docker-build-publish:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: PRE_BUILD_IMAGE_LIST
       run: docker images
     - name: LOGIN_TO_DOCKER_HUB
