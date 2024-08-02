@@ -27,3 +27,10 @@ jobs:
         tags: vaibhavvadgama/newswebapp
     - name: LIST_IMAGES_POST_BUILD
       run: docker images
+  
+  deploy-kubernetes-cluster:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: PRE_BUILD_IMAGE_LIST
+      run: .github/workflows/scripts/deploy-kubernetes-cluster.sh
